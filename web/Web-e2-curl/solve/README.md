@@ -52,7 +52,7 @@
 
 ### Решение 2
 
-`;cat<flag.txt`
+`;cat<secure/flag.txt`
 
 **Флаг:**
 
