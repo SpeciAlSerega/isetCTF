@@ -59,31 +59,83 @@ if (isset($_GET['type'],$_GET['user'],$_GET['pass']) && !empty($_GET['type']) &&
 }
 else{
 	echo '
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=\'stylesheet prefetch\' href=\'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\'>
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+</head>
+
 <body>
-<form>
-  Register:<br>
-  <input class="input100" type="text" name="user" pattern="^((?!\s|\t.)*$"><br>
-  <input type="password" name="pass" pattern="^((?!\s|\t.)*$"><br>
-  <input type="hidden" name="type" value="reg"><br>
-  <input type="submit" value="Register">
-</form>
-<br>
-<br>
-<form>
-  Login:<br>
-  <input type="text" name="user" pattern="^((?!\s|\t.)*$"><br>
-  <input type="password" name="pass" pattern="^((?!\s|\t.)*$"><br>
-  <input type="hidden" name="type" value="log"><br>
-  <input type="submit" value="Login">
-</form> 
-<br>
-<br>
+
+
+<div class="box">
+  <nav id="tabs" class="tabs">
+    <a id="tabLogin" class="iconLogin active blueBox" title="Войти"></a>
+    <a id="tabRegister" class="iconRegister greenBox" title="Регистрация"></a>
+  </nav>
+
+  <div class="containerWrapper">
+
+                                                            <!-- login container -->
+    <div id="containerLogin" class="tabContainer active">
+      <form>
+      <h2 class="loginTitle">Авторизация</h2>
+      <div class="loginContent">
+		<div class="inputWrapper">
+		
+		<input class="input100" type="text" placeholder="Login" name="user" pattern="^((?!\s|\t.)*$">
+        </div>
+        <div class="inputWrapper">
+		<input type="password" name="pass"  placeholder="Password" pattern="^((?!\s|\t.)*$">
+        </div>
+      </div>
+	  <button class="blueBox" type="submit" value="Login">
+	  <input type="hidden" name="type" value="log">
+
+	  	<span class="iconLogin">
+	  	</span> ВОЙТИ
+	  </button>
+      <div class="clear"></div>
+    </form>
+    </div>
+
+                                                             <!-- register container -->
+    <div id="containerRegister" class="tabContainer">
+      <form action="do some action here!">
+        <h2 class="loginTitle">Регистрация</h2>
+        <div class="registerContent">
+		  <div class="inputWrapper">
+		  
+		  <input class="input100" type="text" placeholder="Login" name="user" pattern="^((?!\s|\t.)*$">
+		  </div>
+		  <div class="inputWrapper">
+		  <input type="password" name="pass"  placeholder="Password" pattern="^((?!\s|\t.)*$">
+		  </div>
+		</div>
+		<button class="blueBox" type="submit" value="Register">
+		<input type="hidden" name="type" value="reg">
+		
+		<span class="iconRegister"></span> Зарегистрироваться</button>
+        <div class="clear"></div>
+      </form>
+    </div>
+    <div class="clear"></div>
+
+  </div>
+</div>
 <br>
 Our users:<br>
 <textarea name="textarea" rows="5" cols="30" disabled>'.file_get_contents("users.txt").'</textarea>
 </body>
-</html>';
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+	';
 
 }
