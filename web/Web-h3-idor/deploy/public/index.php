@@ -17,7 +17,7 @@ function reg(){
 		fclose($file);
 		echo "Wow! Success!!";
     } else{
-    	echo "lol =)";
+    	echo "lol =)  (reg) ";
     }
 }
 
@@ -33,7 +33,7 @@ function login(){
     	setcookie("cook", base64_encode($_GET['user']),time()+600);
     	header("Location: /");
     } else{
-    	echo "lol =)";
+    	echo "lol =)    (log)";
     }
 }
 
@@ -106,7 +106,7 @@ else{
 
                                                              <!-- register container -->
     <div id="containerRegister" class="tabContainer">
-      <form action="do some action here!">
+      <form>
         <h2 class="loginTitle">Регистрация</h2>
         <div class="registerContent">
 		  <div class="inputWrapper">
