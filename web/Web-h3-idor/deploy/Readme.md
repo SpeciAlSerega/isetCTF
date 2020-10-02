@@ -7,6 +7,6 @@
 `docker-compose up --build`
 
 ### Вторая команда! 
-`docker exec -it deploy_webserver_1 chmod 777 /application/public/`
+`docker exec -it deploy_webserver_1 chmod 777 public/*`
 
 > Если ругается на `deploy_webserver_1`, то изменить на имя контейнера (`docker-compose ps` в директории с проектом)
