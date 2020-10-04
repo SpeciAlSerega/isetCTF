@@ -15,9 +15,56 @@ function reg(){
 		$file = fopen($_GET['user'].".txt", "w");
 		fwrite($file,$_GET['user'].' '.$_GET['pass']."\n");
 		fclose($file);
-		echo "Wow! Success!!";
+    echo '
+    
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=\'stylesheet prefetch\' href=\'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\'>
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<div class="box">
+  <h1>Wow! Success!!</h1>
+  </div>
+</div>
+<br>
+Our users:<br>
+<textarea name="textarea" rows="5" cols="30" disabled>'.file_get_contents("users.txt").'</textarea>
+</body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+    ';
     } else{
-    	echo "lol =)  (reg) ";
+      echo ' 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=\'stylesheet prefetch\' href=\'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\'>
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<div class="box">
+  <h1>Registration error</h1>
+  </div>
+</div>
+<br>
+Our users:<br>
+<textarea name="textarea" rows="5" cols="30" disabled>'.file_get_contents("users.txt").'</textarea>
+</body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html> 
+      ';
     }
 }
 
@@ -33,10 +80,32 @@ function login(){
     	setcookie("cook", base64_encode($_GET['user']),time()+600);
     	header("Location: /");
     } else{
-    	echo "lol =)    (log)";
+      echo '
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=\'stylesheet prefetch\' href=\'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\'>
+	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<div class="box">
+  <h1>Login failed</h1>
+  </div>
+</div>
+<br>
+Our users:<br>
+<textarea name="textarea" rows="5" cols="30" disabled>'.file_get_contents("users.txt").'</textarea>
+</body>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
+      ';
     }
 }
-
 
   $string = file_get_contents("users.txt");
   $string = explode("\n", $string);
@@ -67,20 +136,14 @@ else{
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel=\'stylesheet prefetch\' href=\'http://netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.min.css\'>
 	<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
-
 </head>
-
 <body>
-
-
 <div class="box">
   <nav id="tabs" class="tabs">
     <a id="tabLogin" class="iconLogin active blueBox" title="Войти"></a>
     <a id="tabRegister" class="iconRegister greenBox" title="Регистрация"></a>
   </nav>
-
   <div class="containerWrapper">
-
                                                             <!-- login container -->
     <div id="containerLogin" class="tabContainer active">
       <form>
