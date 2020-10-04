@@ -1,8 +1,3 @@
-<!-- <div class="container mt-4">
-<div class="row">
-<div class="col">
-<meta charset="UTF-8"> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,10 +62,3 @@
 
 </body>
 </html>
-
-
-
-<!-- <center>
-<a href="login.php">Авторизоваться</a><br>
-<a href="reg.php">Регистрация</a>
-</center> -->
