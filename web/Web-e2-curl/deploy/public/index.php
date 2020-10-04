@@ -14,6 +14,8 @@ function curl($target){
 body {
 background: #c7b39b url(server.jpg);
  color: #ffff;
+ background-size: cover;
+
 }
 </style>
 </head>
