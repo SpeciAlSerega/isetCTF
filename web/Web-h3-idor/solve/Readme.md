@@ -48,4 +48,4 @@ admin
 
 **Флаг:**
 
-> iset{K0LUmn_TRUNc4t10N_1z_4W350m3}
+> iset{w3LcoM3_To_t3H_1dOR}
