@@ -5,7 +5,7 @@
 | isetCTF 2020 | short_book | Web | 200 |
 
 ### Описание
-> Автор: [ dikidikiday ]
+> Автор: [ @dikidikiday ]
 >
 > **Записки сисадмина:** *день первый*
 >
